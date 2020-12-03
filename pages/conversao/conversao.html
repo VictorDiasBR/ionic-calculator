@@ -1,0 +1,42 @@
+<ion-header align="center">
+  <ion-toolbar>
+    <ion-title>
+      Conversor
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding align="center">
+  <ion-item>
+    <ion-label>De</ion-label>
+    <ion-select [(ngModel)]="de">
+      <ion-option value="segundos">Segundos</ion-option>
+      <ion-option value="minutos">Minutos</ion-option>
+      <ion-option value="horas">Horas</ion-option>
+      <ion-option value="dias">Dias</ion-option>
+      <ion-option value="semanas">Semanas</ion-option>
+      <ion-option value="meses">Meses</ion-option>
+      <ion-option value="anos">Anos</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>Para</ion-label>
+    <ion-select [(ngModel)]="para">
+      <ion-option value="segundos">Segundos</ion-option>
+      <ion-option value="minutos">Minutos</ion-option>
+      <ion-option value="horas">Horas</ion-option>
+      <ion-option value="dias">Dias</ion-option>
+      <ion-option value="semanas">Semanas</ion-option>
+      <ion-option value="meses">Meses</ion-option>
+      <ion-option value="anos">Anos</ion-option>
+    </ion-select>
+  </ion-item>
+  <br>
+  	<ion-item align="left">
+			<ion-label color="secundary"> Valor </ion-label>
+			<ion-input type="number" [(ngModel)]="value"></ion-input>
+		</ion-item>
+  <button ion-button (click)="converter()">Converter</button>
+  <div if="res" style="margin-top:50px;">
+    <h1>{{res}} {{para}}</h1>
+  </div>
+</ion-content>
