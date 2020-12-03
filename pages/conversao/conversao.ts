@@ -28,6 +28,8 @@ export class Conversao {
         this.res = (this.value * 720) / Math.pow(2592, 6);
       } else if (this.para === "anos") {
         this.res = (this.value * 8760) / Math.pow(31536, 7);
+      } else {
+        this.res = this.value;
       }
     } else if (this.de === "minutos") {
       if (this.para === "segundos") {
@@ -42,6 +44,8 @@ export class Conversao {
         this.res = (this.value * 730.001) / 43800.06;
       } else if (this.para === "anos") {
         this.res = (this.value * 8760) / 525600;
+      } else {
+        this.res = this.value;
       }
     } else if (this.de === "horas") {
       if (this.para === "segundos") {
@@ -56,6 +60,8 @@ export class Conversao {
         this.res = this.value / 720;
       } else if (this.para === "anos") {
         this.res = this.value / 8760;
+      } else {
+        this.res = this.value;
       }
     } else if (this.de === "dias") {
       if (this.para === "segundos") {
@@ -70,6 +76,8 @@ export class Conversao {
         this.res = this.value * 0.0328767;
       } else if (this.para === "anos") {
         this.res = this.value * 0.00273973;
+      } else {
+        this.res = this.value;
       }
     } else if (this.de === "semanas") {
       if (this.para === "segundos") {
@@ -84,6 +92,8 @@ export class Conversao {
         this.res = this.value * 0.230137;
       } else if (this.para === "anos") {
         this.res = this.value * 0.0191781;
+      } else {
+        this.res = this.value;
       }
     } else if (this.de === "meses") {
       if (this.para === "segundos") {
@@ -98,6 +108,8 @@ export class Conversao {
         this.res = this.value * 4.34524;
       } else if (this.para === "anos") {
         this.res = this.value * 0.0833334;
+      } else {
+        this.res = this.value;
       }
     } else if (this.de === "anos") {
       if (this.para === "segundos") {
@@ -112,7 +124,10 @@ export class Conversao {
         this.res = this.value * 52.1429;
       } else if (this.para === "meses") {
         this.res = this.value * 12;
+      } else {
+        this.res = this.value;
       }
     }
+    //this.res = Number(this.res.toFixed(2));
   }
 }
